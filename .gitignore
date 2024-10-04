@@ -24,3 +24,5 @@ poetry.lock
 .pre-commit-config.yaml
 
 /build
+/venv
+venv/
