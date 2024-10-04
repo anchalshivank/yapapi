@@ -25,7 +25,7 @@ async def main():
     tasks = [Task(data=None) for _ in range(6)]  # Create 6 tasks
 
     async with Golem(budget=1.0, subnet_tag="randomname") as golem:
-        async for completed in golem.execute_tasks(worker, tasks, payload=package, maxworkers=6):
+        async for completed in golem.execute_tasks(worker, tasks, payload=package, max_workers=6):
             print(completed.result.stdout)
 
 
